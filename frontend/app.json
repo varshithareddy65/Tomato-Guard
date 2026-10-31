@@ -1,0 +1,55 @@
+{
+  "expo": {
+    "name": "Tomato Guard",
+    "slug": "tomato-guard",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "userInterfaceStyle": "light",
+    "assetBundlePatterns": [
+      "**/*"
+    ],
+    "plugins": [
+      [
+        "expo-camera",
+        {
+          "cameraPermission": "Allow Tomato Guard to use the camera for tomato leaf photos."
+        }
+      ],
+      [
+        "expo-image-picker",
+        {
+          "photosPermission": "Allow Tomato Guard to access your photos to pick a leaf image."
+        }
+      ],
+      [
+        "expo-location",
+        {
+          "locationAlwaysAndWhenInUsePermission": "Allow Tomato Guard to use your location for local weather and farming advice."
+        }
+      ],
+      "expo-status-bar"
+    ],
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.tomatoguard.app",
+      "infoPlist": {
+        "NSCameraUsageDescription": "Tomato Guard needs camera access to photograph tomato leaves for disease detection.",
+        "NSPhotoLibraryUsageDescription": "Tomato Guard needs photo library access to select leaf images.",
+        "NSLocationWhenInUseUsageDescription": "Tomato Guard uses your location to show weather-based disease risk and advice."
+      }
+    },
+    "android": {
+      "package": "com.tomatoguard.app",
+      "adaptiveIcon": {
+        "backgroundColor": "#2ecc71"
+      },
+      "permissions": [
+        "CAMERA",
+        "READ_EXTERNAL_STORAGE",
+        "WRITE_EXTERNAL_STORAGE",
+        "ACCESS_FINE_LOCATION",
+        "ACCESS_COARSE_LOCATION"
+      ]
+    }
+  }
+}
